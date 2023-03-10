@@ -9,7 +9,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
-@Table(name = "notes")
+@Table(name = "siswa")
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = { "createdAt", "updatedAt" }, allowGetters = true)
 public class SiswaModel {
@@ -22,20 +22,23 @@ public class SiswaModel {
   private String nama;
 
   @NotBlank
-  private String Nik;
+  private String nisn;
 
   @NotBlank
-  private String Jk;
+  private String jk;
 
-  @Column(nullable = false, updatable = false)
-  @Temporal(TemporalType.TIMESTAMP)
-  @CreatedDate
-  private Date CreatedAt;
+  @NotBlank
+  private String kelas;
 
-  @Column(nullable = false)
-  @Temporal(TemporalType.TIMESTAMP)
-  @LastModifiedDate
-  private Date updatedAt;
+  // @Column(nullable = false, updatable = false)
+  // @Temporal(TemporalType.TIMESTAMP)
+  // @CreatedDate
+  // private Date CreatedAt;
+
+  // @Column(nullable = false)
+  // @Temporal(TemporalType.TIMESTAMP)
+  // @LastModifiedDate
+  // private Date updatedAt;
 
   public Long getId() {
     return id;
@@ -49,39 +52,45 @@ public class SiswaModel {
     return nama;
   }
 
-  public String getNik() {
-    return Nik;
+  public String getnisn() {
+    return nisn;
   }
 
-  public String getJk() {
-    return Jk;
+  public String getjk() {
+    return jk;
   }
 
   public void setnama(String nama) {
     this.nama = nama;
   }
 
-  public void setNik(String Nik) {
-    this.Nik = Nik;
+  public void setnisn(String nisn) {
+    this.nisn = nisn;
   }
 
-  public void setJk(String Jk) {
-    this.Jk = Jk;
+  public void setjk(String jk) {
+    this.jk = jk;
   }
 
-  public Date setUpdatedAt(Date CreatedAt) {
-    return updatedAt;
+  public void setkelas(String kelas) {
+    this.kelas = kelas;
   }
 
-  public Date setCreatedAt(Date CreatedAt) {
-    return CreatedAt;
+  public String getkelas() {
+    return kelas;
   }
+  // public Date setUpdatedAt(Date CreatedAt) {
+  //   return updatedAt;
+  // }
 
-  public Date getUpdatedAt() {
-    return updatedAt;
-  }
+  // public Date setCreatedAt(Date CreatedAt) {
+  //   return CreatedAt;
+  // }
+  // public Date getUpdatedAt() {
+  //   return updatedAt;
+  // }
 
-  public Date getCreatedAt() {
-    return CreatedAt;
-  }
+  // public Date getCreatedAt() {
+  //   return CreatedAt;
+  // }
 }

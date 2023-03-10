@@ -10,7 +10,7 @@ public class KelasController {
 
   @GetMapping("/list")
   public Map<Map, String> Siswa() {
-    Map map = new HashMap<String, String>();
+    Map map = new HashMap<Map, String>();
     map.put("apiVersion", "v1");
     map.put("get", "listdata");
     return map;
@@ -20,6 +20,4 @@ public class KelasController {
   public String StoreSiswa() {
     return null;
   }
-  // @Pu("put")
-
 }
