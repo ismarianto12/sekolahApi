@@ -2,6 +2,7 @@ package com.apiSekoalh.controllers;
 
 import java.util.*;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,4 +15,11 @@ public class KelasController {
     map.put("get", "listdata");
     return map;
   }
+
+  @GetMapping("/store")
+  public String StoreSiswa() {
+    return null;
+  }
+  // @Pu("put")
+
 }
