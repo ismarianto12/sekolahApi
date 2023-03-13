@@ -44,7 +44,7 @@ public class LoginModel {
     this.level = level;
   }
 
-  public Long id() {
+  public Long getId() {
     return id;
   }
 
@@ -59,4 +59,6 @@ public class LoginModel {
   public String getlevel() {
     return level;
   }
+
+  public void setAttribute(String string, String username2) {}
 }
