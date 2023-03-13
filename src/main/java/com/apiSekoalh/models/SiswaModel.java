@@ -30,15 +30,15 @@ public class SiswaModel {
   @NotBlank
   private String kelas;
 
-  // @Column(nullable = false, updatable = false)
-  // @Temporal(TemporalType.TIMESTAMP)
-  // @CreatedDate
-  // private Date CreatedAt;
+  @Column(nullable = false, updatable = false)
+  @Temporal(TemporalType.TIMESTAMP)
+  @CreatedDate
+  private Date CreatedAt;
 
-  // @Column(nullable = false)
-  // @Temporal(TemporalType.TIMESTAMP)
-  // @LastModifiedDate
-  // private Date updatedAt;
+  @Column(nullable = false)
+  @Temporal(TemporalType.TIMESTAMP)
+  @LastModifiedDate
+  private Date updatedAt;
 
   public Long getId() {
     return id;
@@ -79,18 +79,20 @@ public class SiswaModel {
   public String getkelas() {
     return kelas;
   }
-  // public Date setUpdatedAt(Date CreatedAt) {
-  //   return updatedAt;
-  // }
 
-  // public Date setCreatedAt(Date CreatedAt) {
-  //   return CreatedAt;
-  // }
-  // public Date getUpdatedAt() {
-  //   return updatedAt;
-  // }
+  public Date setUpdatedAt(Date CreatedAt) {
+    return updatedAt;
+  }
 
-  // public Date getCreatedAt() {
-  //   return CreatedAt;
-  // }
+  public Date setCreatedAt(Date CreatedAt) {
+    return CreatedAt;
+  }
+
+  public Date getUpdatedAt() {
+    return updatedAt;
+  }
+
+  public Date getCreatedAt() {
+    return CreatedAt;
+  }
 }
