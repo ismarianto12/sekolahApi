@@ -4,61 +4,57 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.Date;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
-@Table(name = "pegawai")
+@Table(name = "kelas")
 @EntityListeners(AuditingEntityListener.class)
-public class GuruModel {
+public class KelasModel {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   @NotBlank
-  @NotEmpty(message = "Nama tidak boleh Kosong")
-  private String nama;
+  private String id_pegawai;
 
   @NotBlank
-  @NotEmpty(message = "Jenis Kelamin tidak boleh Kosong")
-  private String jk;
+  private String kelas;
 
   @NotBlank
-  @NotEmpty(message = "Alamat tidak boleh Kosong")
-  private String alamat;
+  private String kode;
 
   public void setid(Long id) {
     this.id = id;
   }
 
-  public void setnama(String nama) {
-    this.nama = nama;
+  public void setid_pegawai(String id_pegawai) {
+    this.id_pegawai = id_pegawai;
   }
 
-  public void setjk(String jk) {
-    this.jk = jk;
+  public void setkelas(String kelas) {
+    this.kelas = kelas;
   }
 
-  public void setalamat(String alamat) {
-    this.alamat = alamat;
+  public void setkode(String kode) {
+    this.kode = kode;
   }
 
   public Long getid() {
     return id;
   }
 
-  public String getnama() {
-    return nama;
+  public String getid_pegawai() {
+    return id_pegawai;
   }
 
-  public String getjk() {
-    return jk;
+  public String getkelas() {
+    return kelas;
   }
 
-  public String getalamat() {
-    return alamat;
+  public String getkode() {
+    return kode;
   }
 }

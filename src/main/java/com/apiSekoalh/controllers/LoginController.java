@@ -70,4 +70,8 @@ public class LoginController {
     // return "employeeView";
     return "Data berhasil di simpan";
   }
+  public List<LoginModel> Update(LoginModel login){
+    return loginrepository.Update(loginmodel)
+  }
+
 }
