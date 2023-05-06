@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class KelasController {
 
+  private String kelas;
+
   @Autowired
   @GetMapping("/list")
   public Map<Map, String> Siswa() {
@@ -27,7 +29,7 @@ public class KelasController {
 
   @PostMapping(value = "/kelas/insert")
   public KelasRepository InsertKelas(@RequestBody KelasRepository kelas) {
-    var kelas = kelas.insert(kelas);
-    // return kela;
+    // kelas = kelas.insert(kelas);
+    return kelas;
   }
 }

@@ -8,9 +8,18 @@ public class ResponseData<T> {
   private boolean status;
   private List<String> messages = new ArrayList<>();
   private T payload;
+  private String httpstatus;
 
   public boolean isStatus() {
     return status;
+  }
+
+  public String getHttpstatus() {
+    return httpstatus;
+  }
+
+  public void setHttpstatus() {
+    this.httpstatus = httpstatus;
   }
 
   public void setStatus(boolean status) {

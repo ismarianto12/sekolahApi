@@ -1,5 +1,6 @@
 package com.apiSekoalh.controllers;
 
+import com.apiSekoalh.dto.ResponseData;
 import com.apiSekoalh.models.LoginModel;
 import com.apiSekoalh.repository.LoginRepository;
 import java.util.*;
@@ -26,6 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 @ControllerAdvice
 public class LoginController {
 
+  // private String
   @Autowired
   LoginRepository loginrepository;
 
@@ -67,11 +69,10 @@ public class LoginController {
     // loginmodel.setAttribute("password", loginmodel.getPassword());
     employeeMap.put(loginmodel.getId(), loginmodel);
     loginrepository.save(loginmodel);
-    // return "employeeView";
     return "Data berhasil di simpan";
   }
-  public List<LoginModel> Update(LoginModel login){
-    return loginrepository.Update(loginmodel)
-  }
 
+  public void UpdateDataSiswa(LoginModel login) {
+    // return loginrepository.update(login);
+  }
 }

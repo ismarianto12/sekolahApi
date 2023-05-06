@@ -20,6 +20,7 @@ public class GuruModel {
 
   @NotBlank
   @NotEmpty(message = "Nama tidak boleh Kosong")
+  
   private String nama;
 
   @NotBlank

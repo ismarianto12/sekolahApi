@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.Date;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -19,15 +21,24 @@ public class SiswaModel {
   private Long id;
 
   @NotBlank
+  @NotEmpty(message = "Nama siswa tidak boleh kosong")
   private String nama;
 
   @NotBlank
+  @NotEmpty(message = "Nisn siswa tidak boleh kosong")
   private String nisn;
 
   @NotBlank
+  @NotEmpty(message = "Jenis Kelamin siswa tidak boleh kosong")
   private String jk;
 
   @NotBlank
+  @NotEmpty(message = "Kelas tidak siswa tidak boleh kosong")
+  @Size(
+    min = 5,
+    max = 10,
+    message = "Panjang Character be between 5 and 10 characters"
+  )
   private String kelas;
 
   @Column(nullable = false, updatable = false)
