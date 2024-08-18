@@ -1,4 +1,4 @@
-package com.apiSekoalh.apisekolah;
+package com.Inventori.apisekolah;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
